@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Registration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<link href="~/StudentCss/Registration.css" rel="stylesheet" />
+
+
+<div class="row" style="margin-top:50px">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 mb-4 text-center border border-light p-5" >
+        <p class="h4 mb-4">Student Registration</p>
+        <section>
+            <div class="mb-4">
+                <label class="lbl">StudentId</label>
+                <input class="text-form-control" type="text" id="stdId" />
+            </div>
+            <div class="mb-4">
+                <label class="lbl">FirstName</label>
+                <input class="text-form-control" type="text" id="fName" />
+            </div>
+            <div class="mb-4">
+                <label class="lbl">LastName</label>
+                <input class="text-form-control" type="text" id="lName" />
+            </div>
+            <div class="mb-4">
+                <label class="lbl">CollegeName</label>
+                <input class="text-form-control" type="text" id="clgName" />
+            </div>
+            <div class="mb-4">
+                <input type="button" id="btnSave" onclick="InsertRegistration()" value="SaveStudent" />
+                <input type="button" onclick="GetStudent()" id="btnGetDetails" value="GetStudent" />
+            </div>
+        </section>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+@*<div class="row">
+    <table>
+        <thead>
+            <tr>
+                <th>StudentId</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>College Name</th>
+            </tr>
+            <tr id="stdDetails"></tr>
+        </thead>
+    </table>
+</div>*@
+
+@section Scripts{
+    <script src="~/StudentJs/Registration.js"></script>
+
+    }
